@@ -5,6 +5,7 @@ This repository contains a Python automation script designed to eliminate manual
 
 ## Enterprise Value & Technical Highlights
 In a large-scale infrastructure environment, manually verifying configurations or pulling logs across hundreds of nodes is prone to human error and high mean-time-to-resolution (MTTR). This script solves that by:
+* **Pre-Execution Reachability Checks:** The script verifies basic ICMP/socket reachability to the target IP before initiating the SSH handshake. This intelligent error handling prevents the script from hanging on SSH timeouts for offline nodes, drastically accelerating execution time across massive device inventories.
 * **Enterprise Security Architecture (Jump Server Integration):** The script is designed to navigate strict corporate security boundaries by establishing an initial connection to a Linux-based jump server (bastion host) before initiating secondary SSH sessions to the target end-devices. This mirrors standard production deployments where direct infrastructure access is restricted.
 * **Handling Delay Variation (Send & Wait Logic):** Implements dynamic command timing. The script explicitly waits for the device prompt to return before dispatching the next command. This prevents buffer overruns and ensures reliable execution even across high-latency or fluctuating connections (such as microwave, UBR, or variable-route backhauls).
 * **Scaling Operations:** Reads target IPs from an external `host` file, allowing automated execution across multiple remote devices in a single run.
