@@ -69,7 +69,7 @@ with open('ports.txt', 'w') as f:
             # remote_connection.send('yes\n')
 
             send_and_wait(remote_connection, "Password", "#", timeout=10)
-            send_and_wait(remote_connection, "ter len 0", "#, timeout=5")
+            send_and_wait(remote_connection, "ter len 0", "#", timeout=5)
             final_output = send_and_wait(remote_connection, "sh int desc", "#", timeout=5)
 
             # output = remote_connection.recv(9999).decode()
