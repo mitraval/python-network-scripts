@@ -1,7 +1,7 @@
 # Bulk Network Device Configuration & Log Parsing
 
 ## Overview
-This repository contains a Python automation script designed to eliminate manual CLI workflows for enterprise network management. It automates the process of logging into multiple routing and switching devices, executing a standardized set of commands, and parsing the output for rapid troubleshooting and configuration validation.
+This repository contains a Python automation script designed to eliminate manual CLI workflows for enterprise network management. It automates the process of logging into multiple network devices, executing a standardized set of commands, and parsing the output for rapid troubleshooting and configuration validation.
 
 ## Enterprise Value & Technical Highlights
 In a large-scale infrastructure environment, manually verifying configurations or pulling logs across hundreds of nodes is prone to human error and high mean-time-to-resolution (MTTR). This script solves that by:
