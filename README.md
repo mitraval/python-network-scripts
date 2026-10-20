@@ -9,7 +9,7 @@ In a large-scale infrastructure environment, manually verifying configurations o
 * **Enterprise Security Architecture (Jump Server Integration):** The script is designed to navigate strict corporate security boundaries by establishing an initial connection to a Linux-based jump server (bastion host) before initiating secondary SSH sessions to the target end-devices. This mirrors standard production deployments where direct infrastructure access is restricted.
 * **Handling Delay Variation (Send & Wait Logic):** Implements dynamic command timing. The script explicitly waits for the device prompt to return before dispatching the next command. This prevents buffer overruns and ensures reliable execution even across high-latency or fluctuating connections (such as microwave, UBR, or variable-route backhauls).
 * **Scaling Operations:** Reads target IPs from an external `host` file, allowing automated execution across multiple remote devices in a single run.
-* **Standardizing Output:** Automatically saves and organizes the parsed command outputs into a dedicated `ports` file for easy auditing, diffing, and review.
+* **Standardizing Output:** Automatically saves and organizes the parsed command outputs into a dedicated file for easy auditing, diffing, and review.
 * **Reducing MTTR:** Drastically cuts down the time required to isolate network faults or verify configuration baselines during major incident management.
 
 ## Prerequisites
